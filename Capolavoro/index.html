@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <!--  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./scripts/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <title>Capolavoro V superiore</title>
+</head>
+
+<body class="bg-zinc-600" style="background-image: url(./images/topography.svg);">
+    <!-- HOME -->
+    <div id="home" class="grid grid-cols-1">
+        <!-- titolo -->
+        <div class="grid grid-cols-subgrid">
+            <h1 class="absolute pt-[3%] pl-[5%] z-10 font-bold text-black leading-none tracking-tighter text-left ">
+                <p class="text-8xl lg:text-6xl text-indigo-500">Escursione sul</p>
+                <a href="https://it.wikipedia.org/wiki/Monte_Pavione" target="_blank"
+                    class="select-text text-indigo-500 font-bold text-9xl lg:text-8xl hover:text-indigo-900">PAVIONE</a>
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-subgrid static h-full w-full">
+            <!-- sfondo -->
+            <div class="bg-indigo-800 bg-cover bg-center bg-no-repeat pt-[50%]"
+                style="background-image: url('./images/sfondo_Home.jpg');">
+                <div class="max-w-[960px] mx-auto px-4 ">
+                </div>
+            </div>
+
+            <div class="fixed pt-[3%] right-0 translate-x-[-175px] z-40">
+                <!-- btn -->
+                <div class="fixed pl-[25px]">
+                    <button onclick="functionMenu()"
+                        class="abolute btn bg-indigo-800 bg-opacity-90 outline-indigo-800 btn-lg outline outline-offset-2 outline-1 text-white hover:bg-indigo-900">Indice</button>
+                </div>
+                <!-- menu -->
+                <div id="menu" class="fixed pt-[70px]"> </div>
+            </div>
+        </div>
+
+        <!-- PAGE1 -->
+        <div class="grid grid-cols-subgrid flex h-full w-full pt-[250px] pb-[50px] justify-center">
+            <div class="flex justify-center">
+                <!-- Kanye -->
+                <div id="bounce" class="animate-bounce">
+                    <img src="./images/avatar.svg" onclick="presentation()" id="avatar"
+                        class="h-[150px] cursor-pointer w-auto rounded-3xl shadow-m transition-transform transform origin-center"
+                        alt="">
+                    <a id="clickOnMe">*Cliccami*</a>
+                </div>
+
+                <!-- Reference -->
+                <div id="reference" class="hidden static rounded-xl bg-slate-300 p-5 ml-[100px] w-[780px]">
+                    <h2 class="text-black text-3xl">Ciao, sono Daniel!</h2>
+                    <p class="text-slate-500 text-xl mt-5">
+                        In questo sito web ho condiviso la mia esperienza di escursione sul Monte Pavione.
+                        Dai un'occhiata se ti interessa!😉
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE2-->
+        <div id="premessa" class="grid grid-cols-subgrid static h-full w-full pt-[50px]">
+            <div class="flex justify-center h-full w-full   ">
+                <div class="w-full flex justify-center items-start">
+                    <div class="rounded-xl bg-slate-300 p-5 w-[1150px]">
+                        <h2 class="text-black text-center text-4xl font-bold">Premessa</h2>
+                        <p id="premessaTxt" class="text-slate-500 text-xl text-justify mt-5">
+                            Durante il periodo di lockdown ho capito che stavo sprecando preziose opportunità per
+                            crescere
+                            come persona.
+                            In seguito ad esso, ho quindi deciso di prendere in mano la mia vita e di fare delle scelte
+                            che
+                            mi avrebbero permesso di <b>migliorare</b>.
+                            <br><br>
+                            Una delle decisioni più significative è stata quella di unirmi agli <b>scout</b>.
+                            <br><br>
+                            <a onclick="leggiAncora()"
+                                class="select-text cursor-pointer text-indigo-500 hover:text-indigo-800">
+                                continua a leggere...
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE3 -->
+        <div id="preparazione" class="grid grid-cols-subgrid static h-full w-full pt-[200px]">
+            <section class="text-gray-400 bg-gray-900 body-font">
+                <div class="container px-5 py-20 mx-auto">
+                    <h1 class="sm:text-5xl text-2xl font-medium title-font text-center text-white mb-[30px]">
+                        <a class="text-3xl font-medium title-font text-center text-white">Principali punti di</a>
+                        <br class="hidden sm:block">Preparazione
+                    </h1>
+                    <div class="flex flex-wrap text-center justify-center mb-[70px]">
+                        <p class="text-white-100 text-xl">
+                            Per la nostra <b>sicurezza</b> abbiamo pianificato l'escursione partendo dai seguenti punti:
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                        <div class="p-4 md:w-1/3 flex">
+                            <div
+                                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
+
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                        d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+                                </svg>
+
+                            </div>
+                            <div class="flex-grow pl-6">
+                                <h2 class="text-white text-lg title-font font-medium mb-2">Strutture di supporto</h2>
+                                <p class="leading-relaxed text-base max-w-[350px] text-justify">
+                                    Per garantire un supporto lungo il percorso, abbiamo identificato il
+                                    <a href="https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TM6uqCgrLKswYLRSNagwMTe3SE1LSTMwT0kxTjM3tDKosDBJsUhKM0kyNTcyT0pOTvYSKMpMK03PzFdIScxRKMhMrAIAJ1QWxQ&q=rifugio+dal+piaz&rlz=1C1ONGR_itIT959IT959&oq=rifugio+da&gs_lcrp=EgZjaHJvbWUqGQgBEC4YgwEYrwEYxwEYsQMYgAQYjgUYmAUyBggAEEUYOTIZCAEQLhiDARivARjHARixAxiABBiOBRiYBTIQCAIQLhivARjHARiABBiYBTITCAMQLhivARjHARiABBiOBRiYBTITCAQQLhivARjHARiABBiOBRiYBTITCAUQLhivARjHARiABBiYBRiZBTIQCAYQLhivARjHARiABBiYBTIQCAcQLhivARjHARiABBiYBTITCAgQLhivARjHARiABBiYBRiZBdIBCDMxMDVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                                        target="_blank" class="text-indigo-500 hover:underline">
+                                        Rifugio Dal Piaz
+                                    </a>
+                                    come rifugio di emergenza, che avremmo potuto utilizzare in caso di necessità. È
+                                    stato un punto di riferimento importante, offrendoci una base sicura in situazioni
+                                    di emergenza.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/3 flex">
+                            <div
+                                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                                </svg>
+                            </div>
+                            <div class="flex-grow pl-6">
+                                <h2 class="text-white text-lg title-font font-medium mb-2">Sostentamento</h2>
+                                <p class="leading-relaxed text-base max-w-[350px] text-justify">
+                                    Per quanto riguarda i pasti e l'acqua, ognuno di noi ha portato una scorta
+                                    sufficiente di cibo non deperibile e acqua potabile per i tre giorni di escursione,
+                                    poiché a quelle altitudini sarebbe stato difficile rifornirsi. Lungo il percorso,
+                                    non c'erano fonti d'approvvigionamento, quindi abbiamo dovuto essere
+                                    autosufficienti.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/3 flex">
+                            <div
+                                class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-4 flex-shrink-0">
+
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                                </svg>
+
+                            </div>
+                            <div class="flex-grow pl-6">
+                                <h2 class="text-white text-lg title-font font-medium mb-2">Bivacco</h2>
+                                <p class="leading-relaxed text-base max-w-[350px] text-justify">
+                                    Durante l'escursione, abbiamo trascorso le notti in bivacco in luoghi sicuri e
+                                    adatti. Abbiamo portato in zaino tende da 2/3 posti, che abbiamo montato al momento
+                                    dell'arrivo, permettendoci di riposare in sicurezza e godere della natura
+                                    circostante.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE4 -->
+        <div class="grid grid-cols-subgrid static h-full w-full pt-[200px] ">
+            <div class=" w-full text-2xl text-white text-center text-3xl lg:text-xl items-center ">
+                <p class="mt-10 lg:mt-6 text-3xl lg:text-md">Dai un occhiata ai nostri percorsi... </p>
+            </div>
+            <div class="flex justify-center pl-[10%] pr-[10%]">
+
+                <!-- Card1 -->
+                <div class="min-w-screen min-h-screen bg-gray-1000 items-center justify-center px-10 pt-[50px]">
+                    <div class="bg-gray-900 text-gray-500 rounded-xl shadow-lg overflow-hidden" style="width:314px;">
+                        <div class="bg-gray-900 w-full relative">
+                            <img src="./images/percorsi/Percorso1.jpg" alt="" class="block w-full ">
+                        </div>
+                        <div class="bg-gray-900 rounded-t-lg -mt-5 relative z-8 px-5 pt-2 pb-5">
+                            <div class="w-10 h-1 bg-gray-500 rounded mx-auto mb-5"></div>
+                            <div class="flex -mx-3">
+                                <div class="w-1/2 px-3 text-center">
+
+                                    <div class="text-xl leading-tight text-gray-200">Giorno I</div>
+                                </div>
+                                <div class="w-1/2 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DATA</div>
+                                    <div class="text-xl leading-tight text-gray-200">22 Aug. 2023</div>
+                                </div>
+                            </div>
+                            <hr class="border-gray-800 my-5">
+                            <div class="flex -mx-3">
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DISLIVELLO</div>
+                                    <div class="text-xs leading-tight text-gray-200">970m</div>
+                                </div>
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DISTANZA</div>
+                                    <div class="text-xs leading-tight text-gray-200">5,27 km</div>
+                                </div>
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">TEMPO</div>
+                                    <div class="text-xs leading-tight text-gray-200">4:17 h</div>
+                                </div>
+                            </div>
+                            <hr class="border-gray-800 my-5">
+                            <div class="flex -mx-3">
+
+                                <div class="w-1/2 px-3 ">
+                                    <a href="https://www.komoot.it/tour/1267987230?ref=aso&share_token=ayCceQDln4J0BiS6OHOEw2sEsADsYpH4lnNavie8xxPCiXDXIU"
+                                        target="_blank">
+                                        <button
+                                            class="block w-full rounded-lg p-4 bg-indigo-500 hover:bg-indigo-600 border border-indigo-500 hover:border-indigo-600 text-gray-200 text-center text-sm ml-[60%]">
+                                            MOSTRA
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card2 -->
+                <div class="min-w-screen min-h-screen bg-gray-1000 items-center justify-center px-10  pt-[50px]">
+                    <div class="bg-gray-900 text-gray-500 rounded-xl shadow-lg overflow-hidden" style="width:314px;">
+                        <div class="bg-gray-900 w-full relative">
+
+
+                            <img src="./images/percorsi/Percorso2.jpg" alt="" class="block w-full">
+                        </div>
+                        <div class="bg-gray-900 rounded-t-lg -mt-5 relative z-8 px-5 pt-2 pb-5">
+                            <div class="w-10 h-1 bg-gray-500 rounded mx-auto mb-5"></div>
+                            <div class="flex -mx-3">
+                                <div class="w-1/2 px-3 text-center">
+
+                                    <div class="text-xl leading-tight text-gray-200">Giorno II</div>
+                                </div>
+                                <div class="w-1/2 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DATA</div>
+                                    <div class="text-xl leading-tight text-gray-200">23 Aug. 2023</div>
+                                </div>
+                            </div>
+                            <hr class="border-gray-800 my-5">
+                            <div class="flex -mx-3">
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DISLIVELLO</div>
+                                    <div class="text-xs leading-tight text-gray-200">660 + 680 m</div>
+                                </div>
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DISTANZA</div>
+                                    <div class="text-xs leading-tight text-gray-200">10,3 km</div>
+                                </div>
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">TEMPO</div>
+                                    <div class="text-xs leading-tight text-gray-200">6:40 h</div>
+                                </div>
+                            </div>
+                            <hr class="border-gray-800 my-5">
+                            <div class="flex -mx-3">
+
+                                <div class="w-1/2 px-3 ">
+                                    <a href="https://www.komoot.it/tour/1267991290?ref=aso&share_token=aYYZalg4Xi7sByLpz6AfwbexJriHXNamvxZTWH7h5JKgU8oL3z"
+                                        target="_blank">
+                                        <button
+                                            class="block w-full rounded-lg p-4 bg-indigo-500 hover:bg-indigo-600 border border-indigo-500 hover:border-indigo-600 text-gray-200 text-center text-sm ml-[60%]">
+                                            MOSTRA
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card3 -->
+                <div class="min-w-screen min-h-screen bg-gray-1000 items-center justify-center px-10 pt-[50px]">
+                    <div class="bg-gray-900 text-gray-500 rounded-xl shadow-lg overflow-hidden" style="width:314px;">
+                        <div class="bg-gray-900 w-full relative">
+
+
+                            <img src="./images/percorsi/Percorso3.jpg" alt="" class="block w-full">
+                        </div>
+                        <div class="bg-gray-900 rounded-t-lg -mt-5 relative z-8 px-5 pt-2 pb-5">
+                            <div class="w-10 h-1 bg-gray-500 rounded mx-auto mb-5"></div>
+                            <div class="flex -mx-3">
+                                <div class="w-1/2 px-3 text-center">
+
+                                    <div class="text-xl leading-tight text-gray-200">Giorno III</div>
+                                </div>
+                                <div class="w-1/2 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DATA</div>
+                                    <div class="text-xl leading-tight text-gray-200">24 Aug. 2023</div>
+                                </div>
+                            </div>
+                            <hr class="border-gray-800 my-5">
+                            <div class="flex -mx-3">
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DISLIVELLO</div>
+                                    <div class="text-xs leading-tight text-gray-200">980 m</div>
+                                </div>
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">DISTANZA</div>
+                                    <div class="text-xs leading-tight text-gray-200">5,21 km</div>
+                                </div>
+                                <div class="w-1/3 px-3 text-center">
+                                    <div class="text-xs leading-none mb-2">TEMPO</div>
+                                    <div class="text-xs leading-tight text-gray-200">3:14 h</div>
+                                </div>
+                            </div>
+                            <hr class="border-gray-800 my-5">
+                            <div class="flex -mx-3">
+
+                                <div class="w-1/2 px-3 ">
+                                    <a href="https://www.komoot.it/tour/1267992806?ref=aso&share_token=asFKKjuup21o1oppbvZk1gha6h76jmGM8TSxXJ7KHPFuz9taIa"
+                                        target="_blank">
+                                        <button
+                                            class="block w-full rounded-lg p-4 bg-indigo-500 hover:bg-indigo-600 border border-indigo-500 hover:border-indigo-600 text-gray-200 text-center text-sm ml-[60%]">
+                                            MOSTRA
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE5-->
+        <div id="escursione" class="grid grid-cols-subgrid static h-full w-full pb-[50px]">
+            <div class="grid grid-cols-2 static h-full w-full">
+                <!-- GG1 -->
+                <div class="flex grid-cols-subgrid h-full w-full ">
+                    <div class="w-full flex items-start p-[50px] pl-[100px] pt-[100px]">
+                        <div class="rounded-xl bg-slate-300 p-5 w-[1150px]">
+                            <h2 class="text-black text-center text-4xl font-bold">Giorno I</h2>
+                            <div class=" overflow-x-auto mt-5 max-h-[350px]">
+                                <p class="text-slate-500 text-xl m-[10px] text-justify">
+                                    Salimmo in autobus fino a <b>Croce d'Aune</b> e da lì iniziò la sfida: una salita di
+                                    1000 metri di dislivello distribuiti su 5 km. Contando lo sforzo aggiuntivo di dover
+                                    portare in spalla uno zaino da approssimativamente 22kg.<br><br>
+                                    La prima parte del percorso attraversava una zona boschiva, offrendoci un po' di
+                                    ombra, ma la parte finale, che ci avrebbe condotti al <b>rifugio</b> dove avremmo
+                                    passato la notte, era completamente esposta al sole.<br><br>
+                                    Dopo circa <b>3 ore</b>, avevamo completato gran parte del percorso, quando ci si
+                                    presentò davanti una <b>mulattiera</b>, un antico percorso di ghiaia con tornanti
+                                    utilizzato per il trasporto di merci e bestiame.<br><br>
+                                    Con il tempo che stringeva e il crepuscolo che si avvicinava, decidemmo di prendere
+                                    un percorso alternativo più ripido ma più breve, che ci avrebbe fatto risparmiare
+                                    tempo.<br><br>
+                                    Dopo circa mezz'ora, ci trovammo sulla <b>cresta</b> laterale del Pavione, con uno
+                                    <b>strapiombo</b> da entrambi i lati e un sentiero appena più largo di un metro.
+                                    Dovevamo affrontare una parte con una pendenza superiore ai 45 gradi, praticamente
+                                    una scalata.<br><br>
+                                    Finalmente raggiungemmo la <b>forcella</b>, dove si trovava il rifugio. Tuttavia, ci
+                                    venne negato il permesso di bivaccare in zona.<br><br>
+                                    Abbiamo quindi deciso di scendere per 200 metri in una conca, dalla parte opposta
+                                    della forcella, dove c'era una malga dismessa. Abbiamo utilizzato il lato della
+                                    malga come riparo dalle intemperie e abbiamo piantato le <b>tende</b>.<br><br>
+                                    Alla luce delle stelle, abbiamo preparato la cena e, verso le 22, ci siamo distesi
+                                    su un colle per osservare il cielo notturno prima di ritirarci nelle nostre tende
+                                    per riposare.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- IMG1 -->
+                <div class="flex justify-center items-center h-full w-full p-[50px] pr-[100px] pt-[100px]">
+                    <div class="w-full relative flex justify-center">
+                        <img src="./images/giorni/gg1.jpg" alt=""
+                            class="block hover:scale-125 duration-700  w-100 h-100 max-h-[450px] overflow-hidden rounded-lg">
+                    </div>
+                </div>
+
+                <!-- IMG2 -->
+                <div
+                    class="flex grid grid-cols-subgrid h-full w-full p-[50px] pl-[100px] pt-[100px] justify-center items-center">
+                    <div class="w-full relative flex justify-center">
+                        <img src="./images/giorni/gg2.jpg" alt=""
+                            class="block  hover:scale-125 duration-700 w-100 h-100  max-h-[450px] overflow-hidden rounded-lg">
+                    </div>
+                </div>
+                <!-- GG2 -->
+                <div class="flex grid-cols-subgrid h-full w-full">
+                    <div class="w-full flex items-start p-[50px] pl-[100px] pt-[100px]">
+                        <div class="rounded-xl bg-slate-300 p-5 w-[1150px]">
+                            <h2 class="text-black text-center text-4xl font-bold">Giorno II</h2>
+                            <div class=" overflow-x-auto mt-5 max-h-[350px]">
+                                <p class="text-slate-500 text-xl m-[10px] text-justify">
+                                    Il percorso previsto per il secondo giorno era principalmente <b>panoramico ed
+                                        esplorativo</b>, trovandosi a una considerevole altitudine, non lontano dalla
+                                    cima del Pavione.<br><br>
+                                    Decidemmo di percorrere un anello in cresta che ci avrebbe portato alla cima, dove
+                                    avremmo fatto una breve sosta prima di completare l'anello e tornare al punto di
+                                    partenza.<br><br>
+                                    Il totale sarebbe stato di <b>660m</b> di dislivello in salita e <b>680m</b> in
+                                    discesa in <b>10 km</b> totali. Prima di partire, abbiamo deciso di lasciare il peso
+                                    inutile per l'escursione vicino alle tende, nascondendolo in cespugli e avvolgendo
+                                    il tutto nei nostri giubbotti impermeabili.<br><br>
+                                    Dopo una serie di sali-scendi, raggiungemmo la <b>cima</b> del Pavione e cucinammo
+                                    polenta e salame per pranzo. La vista dalla cima del Pavione, con i suoi <b>2335
+                                        metri</b> di altitudine, ci offriva un panorama mozzafiato sul
+                                    <b>Trentino</b>.<br><br>
+                                    Pochi minuti dopo aver ripreso il cammino, iniziammo a sentire gocce di pioggia.
+                                    Decidemmo di fare <b>dietrofront</b>, scegliendo il percorso più breve e ripido per
+                                    tornare a recuperare i nostri oggetti e rifugiarci nel rifugio.<br><br>
+                                    La pioggia diventava sempre più intensa e la situazione divenne critica quando
+                                    iniziò a grandinare mentre stavamo praticamente correndo lungo il sentiero.
+                                    Arrivammo al rifugio completamente bagnati e aspettammo che il temporale si
+                                    calmasse.<br><br>
+                                    Tornammo a recuperare gli oggetti nascosti, che fortunatamente erano rimasti quasi
+                                    completamente asciutti. Per questioni di sicurezza, decidemmo di alloggiare in una
+                                    stanza del rifugio, che ci offrì il soggiorno gratuito per la notte, considerandoci
+                                    <b>"rifugiati"</b> dalla tempesta.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GG3 -->
+                <div class="flex grid-cols-subgrid h-full w-full   ">
+                    <div class="w-full flex items-start p-[50px] pl-[100px] pt-[100px]">
+                        <div class="rounded-xl bg-slate-300 p-5 w-[1150px]">
+                            <h2 class="text-black text-center text-4xl font-bold">Giorno III</h2>
+                            <div class=" overflow-x-auto mt-5 max-h-[350px]">
+                                <p class="text-slate-500 text-xl m-[10px] text-justify">
+                                    Fu il termine di un'avventura.<br><br>
+                                    Ripercorremmo i <b>1000 metri</b> di dislivello fatti il primo giorno, questa volta
+                                    in <b>discesa</b>, cercando di evitare i sentieri più rischiosi.<br><br>
+                                    Arrivati in paese, eravamo stremati ma soddisfatti dell'esperienza vissuta.
+                                    Riuscimmo a prendere l'autobus e tornare a casa, almeno <b>interi</b> fisicamente.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- IMG3 -->
+                <div class="flex justify-center items-center h-full w-full p-[50px] pr-[100px] pt-[100px]">
+                    <div class="w-full relative flex justify-center">
+                        <img src="./images/giorni/gg3.jpg" alt=""
+                            class="block hover:scale-125 duration-700  w-100 h-100 max-h-[450px] overflow-hidden rounded-lg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- PAGE6 -->
+        <div id="conclusione" class="grid grid-cols-subgrid static h-full w-full pt-[200px] background"
+            style="position: relative;">
+            <section class="text-gray-400 bg-gray-900 body-font">
+                <div class="container px-5 py-20 mx-auto">
+                    <h1 class="sm:text-5xl text-2xl font-medium title-font text-center text-white mb-[60px]">
+                        <a>Conclusione</a>
+                    </h1>
+                    <div class="flex flex-wrap text-center">
+                        <p class="text-white-100 text-xl ">
+                            Questa avventura è stata davvero significativa per me, perché per la prima volta ho avuto
+                            l'opportunità di compiere un percorso del genere in completa <b>autonomia</b>, senza la
+                            guida di figure adulte più esperte.<br>
+                            È stata un'esperienza che mi ha fatto rivalutare il mio senso di <b>responsabilità</b> non
+                            solo per me stesso, ma anche verso i miei compagni di viaggio.<br><br>
+                            Mi ha dato un senso di <b>indipendenza</b> e consapevolezza della necessità di sapermi
+                            arrangiare anche nelle situazioni più scomode.<br>
+                            Inoltre, mi ha aiutato a migliorare la capacità di prendere <b>decisioni</b> in momenti
+                            difficili, dimostrandomi quanto sia importante essere preparati e reattivi di fronte alle
+                            sfide che la vita ci pone davanti.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- PAGE7 -->
+        <div id="galleria" class="grid grid-cols-subgrid static h-full w-full pt-[200px]">
+
+            <div id="leftScroll"
+                class="absolute text-slate-300 cursor-pointer z-20 mt-[14%] hover:text-indigo-800 select-none"
+                style="left:4%;" onclick="scrollleft()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-[80px]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m11.25 9-3 3m0 0 3 3m-3-3h7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </div>
+            
+            <div id="containerGalleria" class="container mx-auto px-14 border-3 border-black ">
+                <div id="scrollableContainer" class="overflow-x-scroll max-h-[650px] hide-scroll-bar">
+                    <div class="flex">
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[370px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700 ">
+                                        <img src="" class="h-[60px] w-auto rounded-lg" />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/9.jpg" class="h-[450px] w-auto rounded-lg " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[320px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/13.jpeg" class="h-[300px] w-auto rounded-lg " />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700 ">
+                                        <img src="./images/galleria/10.jpg" class="h-[300px] w-auto rounded-lg " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[370px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700 ">
+                                        <img src="" class="h-[60px] w-auto rounded-lg" />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/1.jpg" class="h-[450px] w-auto rounded-lg " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[370px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/8.jpg" class="h-[300px] w-auto rounded-lg " />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700 ">
+                                        <img src="./images/galleria/4.jpg" class="h-[300px] w-auto rounded-lg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[600px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700 ">
+                                        <img src="" class="h-[60px] w-auto rounded-lg" />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/2.jpg" class="h-[450px] w-auto rounded-lg " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[420px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/3.jpg" class="h-[300px] w-auto rounded-lg" />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/7.jpg" class="h-[300px] w-auto rounded-lg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[350px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700 ">
+                                        <img src="" class="h-[60px] w-auto rounded-lg" />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/12.jpg" class="h-[450px] w-auto rounded-lg " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[420px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/5.jpg"
+                                            class="h-[300px] w-auto rounded-lg ml-[40px]" />
+                                    </div>
+                                    <div class="hover:scale-105 duration-700">
+                                        <img src="./images/galleria/6.jpg" class="h-[300px] w-auto rounded-lg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inline-block px-3 ">
+                            <div class="w-[50px] overflow-hidden ease-in-out p-2">
+                                <div class=" grid gap-4">
+                                    <div class="hover:scale-105 duration-700">
+                                        <img class="h-[300px] w-auto rounded-lg " />
+                                    </div>
+                                </div>
+                                <div class=" grid gap-4">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="rightScroll"
+                class="absolute text-slate-300 cursor-pointer z-20 mt-[14%] hover:text-indigo-800 select-none"
+                style="right:4%;" onclick="scrollRight()">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="h-[80px]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="pt-[200px]">
+            <footer id="crediti" class="select-none bg-gray-800 bg-opacity-90 z-20 w-full h-full">
+                <div class=" w-full text-2xl text-white text-center text-3xl lg:text-xl items-center mt-20 lg:mt-14">
+                    <br>
+                    <p class="mt-10 lg:mt-6 text-3xl lg:text-md">Capolavoro - anno scolastico 2023/2024</p>
+                    <ul class="grid grid-cols-3 grid-rows-2 gap-y-5 lg:inline-flex lg:gap-10 mt-8 lg:mt-3 text-md">
+                        <li>Daniel Michielin</li>
+                    </ul>
+                    <p>5AII</p>
+                    <script>setInterval(zoom, 1000);</script>
+                </div>
+                <div class="w-full h-20"></div>
+            </footer>
+        </div>
+</body>

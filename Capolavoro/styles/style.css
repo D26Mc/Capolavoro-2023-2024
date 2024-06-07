@@ -1,0 +1,45 @@
+/* Aggiungi questa classe per l'animazione di spostamento dell'avatar */
+.move-left-animation {
+    animation: moveLeft 0.5s forwards;
+}
+
+.move-back-animation {
+    animation: moveBack 0s forwards;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 300px)); /* Sposta l'avatar di 100% della sua larghezza + 300px per lasciare spazio al messaggio */
+    }
+}
+
+@keyframes moveBack {
+    to {
+        transform: translateX(0);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(229, 231, 235, var(--bg-opacity));
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-color: #a0aec0;
+}
+
+.hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
+  }
